@@ -22,3 +22,352 @@
     --ff-inter: "Inter", sans-serif;
 }
 
+body{
+    background-color: var(--color-white);
+    min-height: 100vh;
+    font-family: var(--ff-inter);
+}
+
+main{
+    display: inline-flex;
+    margin-inline: auto;
+}
+
+.right{
+    height: 100vh;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 5em;
+    margin-block-start: 3em;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    width: 10rem;
+    font-size: 1.25rem;
+
+}
+.title-warp{
+    margin-block-start: 2em;
+    font-size: 2.25rem;
+    line-height: 2em;
+    font-size: clamp(0.75rem,1.25rem + 1vw,4rem); 
+    
+}
+.peraa{
+    width: 55%;
+    line-height: 1.55em;
+    font-weight: 500;
+    padding-block: 1.25rem;
+    color: #212121;
+}
+.strated{
+    width: 10.25em;
+    height: 2.75em;
+    border: 0;
+    border-radius: 1.25rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    box-shadow: 1px 6px 9px 0px rgba(46, 46, 46, 0.2);
+    
+}
+.butten-content{
+    padding-inline-end: 0.75rem;
+    font-weight: 600;
+}
+.box-hover{
+    transition: all 0.15s ease-in-out;
+}
+button:hover{
+    cursor: pointer;
+    .box-hover{
+     
+     transition: all 0.15s ease-in-out;
+     transform: translateX(7px);
+    }
+}
+
+.users{
+    width: 70%;
+    padding-block-start: 4.75rem;
+    display: flex;
+    justify-content: space-between;
+}
+.h-five{
+    font-size: .95rem;
+    animation: slide 1.2s cubic-bezier(0, 0.75, 0.62, 1.02)0.3s 1;
+}
+.span{
+    font-size: 0.75rem;
+    color: #717171;
+    font-weight: 600;
+    animation: slidetwo 1.2s cubic-bezier(0, 0.75, 0.62, 1.02) 0.4s 1;
+}
+
+@keyframes slide{
+    from{
+        transform: translateY(-6px);
+        opacity: 0%;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+    
+}
+
+@keyframes slidetwo{
+    from{
+        transform: translateY(-4px);
+        opacity: 0%;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+.growth-bar{
+    width: 70%;
+    height: 7px;
+    background-color: #d8d8d8;
+    border-radius: 2rem;
+    margin-block: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.growth-bar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    height: 7px;
+    background-color: var(--color-blue);
+    border-radius: 2rem;
+    animation: growth 1.2s cubic-bezier(0, 0.94, 0.56, 0.92) 0.2s 1;
+}
+.circles{
+    width: 50%;
+    height: 6%;
+    display: flex;
+}
+.number{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+}
+
+
+.ui{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #d8d8d8;
+}
+.number:nth-child(1){
+    background-color: var(--color-black);
+}
+.number:nth-child(2){
+    margin-inline: -0.25rem;
+    background-color: #008FF7;
+    animation-name: cut;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.51, 0.43, 0.95);
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    
+}
+.number:nth-child(3){
+    
+    background-color: #173850;
+    animation-name: cuttwo;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.51, 0.43, 0.95);
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+}
+
+.number:nth-child(4){
+    background-color: #031726;
+    margin-inline: -0.1rem;
+    animation-name: cutthree;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0.51, 0.43, 0.95);
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    
+}
+
+.left{
+    height: 100vh;
+    width: 47vw;
+    margin-block: 1rem;
+    
+}
+
+.get-started{
+    width: 7.75rem;
+    height: 2.75rem;
+    border: 0;
+    border-radius: 2rem;
+    color: white;
+    background-color: var(--color-green);
+    box-shadow: -1px 10px 17px 0px #00000029;
+    float: right;
+    margin: 1.25rem;
+}
+.image-wraper{
+    height: 97vh;
+    width: inherit;
+    background-image: url(image.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    border-radius: 1.25rem;
+}
+.bar-pera{
+    font-size: 0.95rem;
+    
+}
+.bar{
+    margin-inline: auto;
+    width: 45vw;
+    height: 50px;
+    position: absolute;
+    bottom: 7%;
+    transform: translateX(13px);
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.364);
+    backdrop-filter: blur(8.2px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 0.75rem;
+}
+
+.bar-container{
+    height: 80%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.666);
+    backdrop-filter: blur(8.2px);
+}
+
+.ethereum{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ethreum-title{
+    padding-inline-end: 1rem;
+}
+
+
+.border-warp{
+    width: 10.25em;
+    height: 5.75em;
+    float: right;
+    background-color: var(--color-white);
+    border-left: 10px solid var(--color-white);
+    border-bottom: 10px solid var(--color-white);
+    border-bottom-left-radius: 2rem;
+    position: relative;
+
+}
+
+.border-warp::before{
+    content: "";
+    position: absolute;
+    left: -23%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 10px -11px 0 rgb(249 249 249); 
+}
+
+.border-warp::after{
+    content: "";
+    position: absolute;
+    left: 84%;
+    top: 112%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 8px -15px 0 rgb(249 249 249);
+}
+
+.number-one:last-child{
+    animation: show 0.6s ease-in-out 0.2s 1;
+}
+.circles{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    
+}
+@keyframes cut {
+    from{
+            transform: translateX(-28px);
+    }
+    to{
+        transform: translateX(-0px);
+
+    }
+    
+}
+@keyframes cuttwo {
+    from{
+            transform: translateX(-55px);
+    }
+    to{
+        transform: translateX(-0px);
+
+    }
+    
+}
+@keyframes cutthree {
+    from{
+            transform: translateX(-80px);
+    }
+    to{
+        transform: translateX(-0px);
+
+    }
+    
+}
+
+@keyframes growth {
+    from{
+        transform: translateX(-178px)
+    }
+    to{
+        transform: translateX(0px)
+    }
+    
+}
